@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	sepatu "github.com/katalogsepatu/be_sepatu"
+	sepatu "github.com/katalogsepatu/be_sepatu/module"
 )
 
 func init() {
@@ -32,6 +32,6 @@ func login_sepatu(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	// Set CORS headers for the main request.
-	fmt.Fprintf(w, sepatu.LogInHandler("MONGOSTRING", "sepatu_db", "user", r))
+	fmt.Fprintf(w, sepatu.LogInHandler("PRIVATEKEY", "MONGOSTRING", "sepatu_db", "user", r))
 
 }

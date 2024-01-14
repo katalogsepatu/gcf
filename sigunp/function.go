@@ -5,11 +5,11 @@ import (
 	"net/http"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	sepatu "github.com/katalogsepatu/be_sepatu"
+	sepatu "github.com/katalogsepatu/be_sepatu/module"
 )
 
 func init() {
-	functions.HTTP("sepatu", signup_sepatu)
+	functions.HTTP("sepatu", register_sepatu)
 }
 
 func register_sepatu(w http.ResponseWriter, r *http.Request) {

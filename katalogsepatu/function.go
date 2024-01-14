@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	sepatu "github.com/katalogsepatu/be_sepatu"
+	sepatu "github.com/katalogsepatu/be_sepatu/module"
 )
 
 func init() {
@@ -22,7 +22,7 @@ func katalog_sepatu(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 	}
-	
+
 	// Set CORS headers for the preflight request
 	if r.Method == http.MethodOptions {
 		w.Header().Set("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE")
