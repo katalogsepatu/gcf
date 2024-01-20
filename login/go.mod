@@ -4,7 +4,7 @@ go 1.21.6
 
 require (
 	github.com/GoogleCloudPlatform/functions-framework-go v1.8.0
-	github.com/katalogsepatu/be_sepatu v0.0.6
+	github.com/katalogsepatu/be_sepatu v0.0.7
 )
 
 require (
