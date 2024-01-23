@@ -32,18 +32,18 @@ func kategori_sepatu(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if r.Method == http.MethodPost {
-		fmt.Fprintf(w, sepatu.TambahKategoriSepatu("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
+		fmt.Fprintf(w, sepatu.TambahKategoriSepatuHandler("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
 		return
 	}
 	if r.Method == http.MethodPut {
-		fmt.Fprintf(w, sepatu.EditKategoriSepatu("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
+		fmt.Fprintf(w, sepatu.EditKategoriSepatuHandler("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
 		return
 	}
 	if r.Method == http.MethodDelete {
-		fmt.Fprintf(w, sepatu.DeleteKategoriSepatu("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
+		fmt.Fprintf(w, sepatu.DeleteKategoriSepatuHandler("PASETOPUBLICKEY", "MONGOSTRING", "sepatu_db", "kategorisepatu", r))
 		return
 	}
 	// Set CORS headers for the main request.
-	fmt.Fprintf(w, sepatu.GetKategoriSepatu("MONGOSTRING", "sepatu_db", "kategorisepatu", r))
+	fmt.Fprintf(w, sepatu.GetKategoriSepatuHandler("MONGOSTRING", "sepatu_db", "kategorisepatu", r))
 
 }
